@@ -1,0 +1,1 @@
+/* Forms logic is in slider.js */

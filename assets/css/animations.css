@@ -1,0 +1,173 @@
+/* ============================================================
+   ANIMATIONS — Abdullah's Quran Academy
+   ============================================================ */
+
+/* ── Hero Animations ── */
+@keyframes fadeInUp    { from { opacity:0; transform:translateY(40px); } to { opacity:1; transform:translateY(0); } }
+@keyframes fadeInLeft  { from { opacity:0; transform:translateX(-40px);} to { opacity:1; transform:translateX(0); } }
+@keyframes fadeInRight { from { opacity:0; transform:translateX(40px); } to { opacity:1; transform:translateX(0); } }
+@keyframes fadeInScale { from { opacity:0; transform:scale(0.85); }     to { opacity:1; transform:scale(1); } }
+@keyframes float       { 0%,100%{ transform:translateY(0); } 50%{ transform:translateY(-12px); } }
+@keyframes shimmer     { 0%{ background-position:-400px 0; } 100%{ background-position:400px 0; } }
+@keyframes rotateRing  { from{ transform:rotate(0deg); } to{ transform:rotate(360deg); } }
+@keyframes scaleIn     { from{ transform:scale(0); opacity:0; } to{ transform:scale(1); opacity:1; } }
+@keyframes slideDown   { from{ transform:translateY(-20px); opacity:0; } to{ transform:translateY(0); opacity:1; } }
+@keyframes gradientShift {
+  0%  { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100%{ background-position: 0% 50%; }
+}
+
+/* ── Hero Entrance Classes ── */
+.anim-fade-up   { animation: fadeInUp   0.8s ease both; }
+.anim-fade-left { animation: fadeInLeft 0.8s ease both; }
+.anim-fade-right{ animation: fadeInRight 0.8s ease both; }
+.anim-scale     { animation: fadeInScale 0.8s ease both; }
+.anim-float     { animation: float 4s ease-in-out infinite; }
+.anim-d1 { animation-delay: 0.1s; }
+.anim-d2 { animation-delay: 0.2s; }
+.anim-d3 { animation-delay: 0.3s; }
+.anim-d4 { animation-delay: 0.4s; }
+.anim-d5 { animation-delay: 0.5s; }
+.anim-d6 { animation-delay: 0.6s; }
+.anim-d7 { animation-delay: 0.7s; }
+.anim-d8 { animation-delay: 0.8s; }
+
+/* ── Animated Gradient Background ── */
+.animated-bg {
+  background: linear-gradient(-45deg, var(--primary-dark), var(--primary), #0D2B1A, var(--navy));
+  background-size: 400% 400%;
+  animation: gradientShift 10s ease infinite;
+}
+
+/* ── Geometric Ring ── */
+.geo-ring {
+  position: absolute;
+  border-radius: 50%;
+  border: 1px solid rgba(201,168,76,0.2);
+  animation: rotateRing 20s linear infinite;
+}
+.geo-ring-2 { animation-direction: reverse; animation-duration: 30s; }
+
+/* ── Shimmer Skeleton ── */
+.shimmer {
+  background: linear-gradient(90deg, var(--cream) 0%, var(--cream-dark) 50%, var(--cream) 100%);
+  background-size: 400px 100%;
+  animation: shimmer 1.4s ease-in-out infinite;
+}
+
+/* ── Pulse Effect ── */
+@keyframes pulseDot {
+  0%,100% { transform:scale(1); opacity:1; }
+  50%     { transform:scale(1.4); opacity:0.6; }
+}
+.pulse-dot {
+  width: 10px; height: 10px;
+  background: var(--gold);
+  border-radius: 50%;
+  display: inline-block;
+  animation: pulseDot 1.8s ease-in-out infinite;
+}
+
+/* ── Ripple on Buttons ── */
+.ripple {
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.35);
+  transform: scale(0);
+  animation: rippleEffect 0.65s linear;
+  pointer-events: none;
+}
+@keyframes rippleEffect { to { transform: scale(4); opacity: 0; } }
+
+/* ── Counter animation handled in JS ── */
+.counter-num { font-variant-numeric: tabular-nums; }
+
+/* ── Particle dots (hero) ── */
+.particles { position:absolute; inset:0; overflow:hidden; pointer-events:none; }
+.particle {
+  position: absolute;
+  width: 3px; height: 3px;
+  background: rgba(201,168,76,0.5);
+  border-radius: 50%;
+  animation: particleFloat var(--dur,8s) ease-in-out infinite var(--delay,0s);
+}
+@keyframes particleFloat {
+  0%,100% { transform: translateY(0) translateX(0); opacity:0.3; }
+  25%     { transform: translateY(-30px) translateX(15px); opacity:0.8; }
+  75%     { transform: translateY(20px) translateX(-10px); opacity:0.5; }
+}
+
+/* ── Stagger Children ── */
+.stagger-children > * { opacity:0; transform:translateY(24px); }
+.stagger-children.visible > *:nth-child(1) { animation: fadeInUp 0.6s 0.05s ease forwards; }
+.stagger-children.visible > *:nth-child(2) { animation: fadeInUp 0.6s 0.15s ease forwards; }
+.stagger-children.visible > *:nth-child(3) { animation: fadeInUp 0.6s 0.25s ease forwards; }
+.stagger-children.visible > *:nth-child(4) { animation: fadeInUp 0.6s 0.35s ease forwards; }
+.stagger-children.visible > *:nth-child(5) { animation: fadeInUp 0.6s 0.45s ease forwards; }
+.stagger-children.visible > *:nth-child(6) { animation: fadeInUp 0.6s 0.55s ease forwards; }
+.stagger-children.visible > *:nth-child(7) { animation: fadeInUp 0.6s 0.65s ease forwards; }
+.stagger-children.visible > *:nth-child(8) { animation: fadeInUp 0.6s 0.75s ease forwards; }
+
+/* ── Underline Reveal ── */
+.underline-reveal { position:relative; display:inline-block; }
+.underline-reveal::after {
+  content: '';
+  position: absolute;
+  bottom: -3px; left: 0;
+  width: 0; height: 2px;
+  background: var(--gold);
+  transition: width 0.4s ease;
+}
+.underline-reveal:hover::after { width: 100%; }
+
+/* ── Gold Glow Hover ── */
+.gold-glow:hover {
+  box-shadow: 0 0 20px rgba(201,168,76,0.5), 0 0 40px rgba(201,168,76,0.2);
+}
+
+/* ── Slide In From Bottom (Page transitions) ── */
+.page-enter { animation: fadeInUp 0.6s ease both; }
+
+/* ── Success Check ── */
+@keyframes checkDraw {
+  0%   { stroke-dashoffset: 100; }
+  100% { stroke-dashoffset: 0; }
+}
+.success-icon circle { animation: scaleIn 0.4s ease both; }
+.success-icon path   { stroke-dasharray: 100; stroke-dashoffset: 100; animation: checkDraw 0.5s 0.3s ease both; }
+
+/* ── Gradient Text ── */
+.gradient-text {
+  background: linear-gradient(135deg, var(--gold), var(--gold-light), var(--gold));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ── Badge Bounce ── */
+@keyframes badgeBounce { 0%,100%{transform:scale(1);} 50%{transform:scale(1.08);} }
+.badge-bounce { animation: badgeBounce 2s ease-in-out infinite; }
+
+/* ── Live Dot ── */
+.live-dot::before {
+  content:'';
+  display: inline-block;
+  width: 8px; height: 8px;
+  background: #22c55e;
+  border-radius: 50%;
+  margin-right: 6px;
+  animation: pulseDot 1.5s infinite;
+  vertical-align: middle;
+}
+
+/* ── Horizontal Scroll Snap (Mobile timeline) ── */
+.scroll-snap-x { display:flex; overflow-x:auto; scroll-snap-type:x mandatory; gap:20px; -webkit-overflow-scrolling:touch; padding-bottom:12px; }
+.scroll-snap-x::-webkit-scrollbar { height:4px; }
+.scroll-snap-x::-webkit-scrollbar-track { background:var(--cream-dark); border-radius:2px; }
+.scroll-snap-x::-webkit-scrollbar-thumb { background:var(--primary-light); border-radius:2px; }
+.scroll-snap-item { flex:0 0 260px; scroll-snap-align:start; }
+
+/* ── Hover Lift ── */
+.hover-lift { transition: transform 0.3s ease, box-shadow 0.3s ease; }
+.hover-lift:hover { transform:translateY(-6px); box-shadow: var(--shadow-lg); }

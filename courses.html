@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Courses | Abdullah Quran Academy</title>
+  
+  <!-- Google Font: Lato & Amiri -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet">
+  
+  <!-- Font Awesome for Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/components.css">
+  <link rel="stylesheet" href="assets/css/animations.css">
+  
+  <style>
+    /* Tabs styling specific to courses */
+    .filter-tabs { display: flex; justify-content: center; gap: 12px; margin-bottom: 40px; flex-wrap: wrap; }
+    .tab-btn { padding: 10px 24px; border-radius: var(--radius-full); background: var(--cream); color: var(--text-dark); font-weight: 700; font-size: 0.9rem; transition: var(--transition); cursor: pointer; border: 1px solid var(--border); }
+    .tab-btn:hover, .tab-btn.active { background: var(--primary); color: white; border-color: var(--primary); }
+    .course-grid .course-card { display: none; }
+    .course-grid .course-card.active { display: flex; }
+    
+    @media (max-width: 600px) {
+      .tab-btn { padding: 8px 16px; font-size: 0.85rem; }
+      .filter-tabs { gap: 8px; margin-bottom: 30px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ── Loading Screen ── -->
+  <div id="loader">
+    <div class="loader-logo">العربية</div>
+    <div class="loader-spinner"></div>
+  </div>
+
+  <!-- ── NAVBAR ── -->
+  <nav class="navbar" id="navbar">
+    <div class="container nav-inner">
+      <a href="index.html" class="nav-logo">
+        <div class="nav-logo-icon">Q</div>
+        <div class="nav-logo-text">
+          <div class="name">ABDULLAH</div>
+          <div class="tagline">Quran Academy</div>
+        </div>
+      </a>
+      
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="journey.html">Journey</a>
+        <a href="courses.html" class="active">Courses</a>
+        <a href="teachers.html">Teachers</a>
+        <a href="registration.html">Registration</a>
+        <a href="faq.html">FAQ</a>
+        <a href="contact.html">Contact</a>
+      </div>
+
+      <div class="nav-cta">
+        <a href="free-trial.html" class="btn btn-gold btn-sm">Free Trial</a>
+      </div>
+
+      <div class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ── MOBILE MENU ── -->
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="journey.html">Journey</a>
+    <a href="courses.html" class="active">Courses</a>
+    <a href="teachers.html">Teachers</a>
+    <a href="registration.html">Registration</a>
+    <a href="faq.html">FAQ</a>
+    <a href="contact.html">Contact</a>
+    <a href="free-trial.html" class="btn btn-gold">Book Free Trial</a>
+  </div>
+
+  <!-- ── PAGE HERO ── -->
+  <section class="page-hero">
+    <div class="pattern-overlay"></div>
+    <div class="container">
+      <h1 class="page-hero-title">Our <span>Courses</span></h1>
+      <p class="page-hero-sub">Explore our comprehensive range of online courses tailored for all levels and ages.</p>
+      <div class="breadcrumb">
+        <a href="index.html">Home</a>
+        <span class="sep">/</span>
+        <span>Courses</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── COURSES SECTION ── -->
+  <section class="section section-white">
+    <div class="container">
+      
+      <!-- Filter Tabs -->
+      <div class="filter-tabs reveal">
+        <button class="tab-btn active" data-group="courses" data-tab="all">All Courses</button>
+        <button class="tab-btn" data-group="courses" data-tab="quran">Quran</button>
+        <button class="tab-btn" data-group="courses" data-tab="arabic">Arabic</button>
+        <button class="tab-btn" data-group="courses" data-tab="kids">For Kids</button>
+        <button class="tab-btn" data-group="courses" data-tab="adults">For Adults</button>
+      </div>
+
+      <!-- Course Grid -->
+      <div class="grid-3 course-grid stagger-children">
+        
+        <!-- 1. Noorani Qaida -->
+        <div class="course-card active" data-id="all quran kids">
+          <div class="course-card-thumb" style="background: var(--cream);">
+            <div class="course-card-icon">📖</div>
+          </div>
+          <div class="course-card-body">
+            <div class="course-card-meta">
+              <span class="badge badge-green">Beginner</span>
+              <span class="badge badge-gold">Kids</span>
+            </div>
+            <h3 class="course-card-title">Noorani Qaida Course</h3>
+            <p class="course-card-desc">The perfect starting point for beginners and kids to learn the Arabic alphabet and pronunciation rules correctly.</p>
+            <ul class="course-card-features">
+              <li>Alphabet Recognition</li>
+              <li>Makhraj (Pronunciation)</li>
+              <li>Basic Reading Rules</li>
+            </ul>
+            <div class="course-card-footer">
+              <div class="course-duration"><i class="fa-regular fa-clock"></i> 3-4 Months</div>
+              <a href="registration.html" class="btn btn-primary btn-sm">Enroll Now</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- 2. Quran Reading -->
+        <div class="course-card active" data-id="all quran adults kids">
+          <div class="course-card-thumb" style="background: var(--cream);">
+            <div class="course-card-icon">🕌</div>
+          </div>
+          <div class="course-card-body">
+            <div class="course-card-meta">
+              <span class="badge badge-green">Intermediate</span>
+              <span class="badge badge-gold">All Ages</span>
+            </div>
+            <h3 class="course-card-title">Quran Reading Course</h3>
+            <p class="course-card-desc">Learn to recite the Holy Quran fluently and confidently from the Mushaf with proper flow.</p>
+            <ul class="course-card-features">
+              <li>Fluent Recitation</li>
+              <li>Basic Application of Rules</li>
+              <li>Daily Supplications</li>
+            </ul>
+            <div class="course-card-footer">
+              <div class="course-duration"><i class="fa-regular fa-clock"></i> 6-8 Months</div>
+              <a href="registration.html" class="btn btn-primary btn-sm">Enroll Now</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- 3. Tajweed Course -->
+        <div class="course-card active" data-id="all quran adults">
+          <div class="course-card-thumb" style="background: var(--cream);">
+            <div class="course-card-icon">📿</div>
+          </div>
+          <div class="course-card-body">
+            <div class="course-card-meta">
+              <span class="badge badge-green">Advanced</span>
+              <span class="badge badge-gold">Adults</span>
+            </div>
+            <h3 class="course-card-title">Tajweed Course</h3>
+            <p class="course-card-desc">Master the advanced rules of Tajweed to recite the Quran exactly as it was revealed to Prophet Muhammad (PBUH).</p>
+            <ul class="course-card-features">
+              <li>Advanced Rules (Noon/Meem Sakinah)</li>
+              <li>Characteristics of Letters</li>
+              <li>Ijazah Preparation</li>
+            </ul>
+            <div class="course-card-footer">
+              <div class="course-duration"><i class="fa-regular fa-clock"></i> 6 Months</div>
+              <a href="registration.html" class="btn btn-primary btn-sm">Enroll Now</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- 4. Hifz Program -->
+        <div class="course-card active" data-id="all quran kids adults">
+          <div class="course-card-thumb" style="background: var(--cream);">
+            <div class="course-card-icon">🧠</div>
+          </div>
+          <div class="course-card-body">
+            <div class="course-card-meta">
+              <span class="badge badge-green">Advanced</span>
+              <span class="badge badge-gold">Hifz</span>
+            </div>
+            <h3 class="course-card-title">Quran Memorization (Hifz)</h3>
+            <p class="course-card-desc">A structured program to help you or your child memorize the Holy Quran with a solid revision system.</p>
+            <ul class="course-card-features">
+              <li>Personalized Hifz Goal</li>
+              <li>Daily Revision System</li>
+              <li>Constant Encouragement</li>
+            </ul>
+            <div class="course-card-footer">
+              <div class="course-duration"><i class="fa-regular fa-clock"></i> 1-3 Years</div>
+              <a href="registration.html" class="btn btn-primary btn-sm">Enroll Now</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- 5. Arabic Language -->
+        <div class="course-card active" data-id="all arabic adults">
+          <div class="course-card-thumb" style="background: var(--cream);">
+            <div class="course-card-icon">🗣️</div>
+          </div>
+          <div class="course-card-body">
+            <div class="course-card-meta">
+              <span class="badge badge-green">All Levels</span>
+              <span class="badge badge-gold">Adults</span>
+            </div>
+            <h3 class="course-card-title">Arabic Language Course</h3>
+            <p class="course-card-desc">Learn Modern Standard Arabic (Fusha) to speak, read, and understand the language of the Quran.</p>
+            <ul class="course-card-features">
+              <li>Vocabulary Building</li>
+              <li>Grammar (Nahw & Sarf)</li>
+              <li>Conversational Skills</li>
+            </ul>
+            <div class="course-card-footer">
+              <div class="course-duration"><i class="fa-regular fa-clock"></i> 6-12 Months</div>
+              <a href="registration.html" class="btn btn-primary btn-sm">Enroll Now</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- 6. Islamic Studies -->
+        <div class="course-card active" data-id="all kids adults">
+          <div class="course-card-thumb" style="background: var(--cream);">
+            <div class="course-card-icon">📚</div>
+          </div>
+          <div class="course-card-body">
+            <div class="course-card-meta">
+              <span class="badge badge-green">General</span>
+              <span class="badge badge-gold">All Ages</span>
+            </div>
+            <h3 class="course-card-title">Islamic Studies Course</h3>
+            <p class="course-card-desc">Covering essential Islamic knowledge including Fiqh, Seerah, Hadith, Aqeedah, and Islamic History.</p>
+            <ul class="course-card-features">
+              <li>Daily Adab & Akhlaq</li>
+              <li>Stories of the Prophets</li>
+              <li>Basic Fiqh (Salah, Wudu)</li>
+            </ul>
+            <div class="course-card-footer">
+              <div class="course-duration"><i class="fa-regular fa-clock"></i> Ongoing</div>
+              <a href="registration.html" class="btn btn-primary btn-sm">Enroll Now</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- 7. Kids Quran Learning -->
+        <div class="course-card active" data-id="all quran kids">
+          <div class="course-card-thumb" style="background: var(--cream);">
+            <div class="course-card-icon">👶</div>
+          </div>
+          <div class="course-card-body">
+            <div class="course-card-meta">
+              <span class="badge badge-green">Beginner</span>
+              <span class="badge badge-gold">Kids Only</span>
+            </div>
+            <h3 class="course-card-title">Kids Quran Learning</h3>
+            <p class="course-card-desc">Specially designed fun and engaging curriculum to keep children interested in learning the Quran.</p>
+            <ul class="course-card-features">
+              <li>Gamified Learning</li>
+              <li>Visual Aids & Stories</li>
+              <li>Short Sessions (30 mins)</li>
+            </ul>
+            <div class="course-card-footer">
+              <div class="course-duration"><i class="fa-regular fa-clock"></i> Flexible</div>
+              <a href="registration.html" class="btn btn-primary btn-sm">Enroll Now</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- 8. Adult Quran Learning -->
+        <div class="course-card active" data-id="all quran adults">
+          <div class="course-card-thumb" style="background: var(--cream);">
+            <div class="course-card-icon">🧔</div>
+          </div>
+          <div class="course-card-body">
+            <div class="course-card-meta">
+              <span class="badge badge-green">All Levels</span>
+              <span class="badge badge-gold">Adults Only</span>
+            </div>
+            <h3 class="course-card-title">Adult Quran Learning</h3>
+            <p class="course-card-desc">Tailored for busy adults. Learn at your own pace with teachers who understand adult learning curves.</p>
+            <ul class="course-card-features">
+              <li>Flexible 24/7 Slots</li>
+              <li>Focus on Understanding</li>
+              <li>No Judgement Environment</li>
+            </ul>
+            <div class="course-card-footer">
+              <div class="course-duration"><i class="fa-regular fa-clock"></i> Flexible</div>
+              <a href="registration.html" class="btn btn-primary btn-sm">Enroll Now</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── CTA SECTION ── -->
+  <section class="section section-cream">
+    <div class="container">
+      <div class="cta-banner">
+        <div class="pattern-overlay"></div>
+        <div class="cta-banner-content">
+          <h2>Not Sure Which Course to Choose?</h2>
+          <p>Book a free assessment session. Our senior tutor will evaluate your level and recommend the best path for you.</p>
+          <div class="btn-group">
+            <a href="free-trial.html" class="btn btn-gold btn-lg">Book Free Assessment</a>
+            <a href="contact.html" class="btn btn-outline-white btn-lg">Contact Us</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── FOOTER ── -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="nav-logo">
+            <div class="nav-logo-icon">Q</div>
+            <div class="nav-logo-text">
+              <div class="name" style="color: white;">ABDULLAH</div>
+              <div class="tagline">Quran Academy</div>
+            </div>
+          </a>
+          <p>A premium online academy offering high-quality Quran, Arabic, and Islamic studies education for students worldwide.</p>
+          <div class="footer-social">
+            <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="https://instagram.com/abdullah.752428"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#"><i class="fa-brands fa-youtube"></i></a>
+            <a href="https://wa.me/8074027524"><i class="fa-brands fa-whatsapp"></i></a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="teachers.html">Our Teachers</a></li>
+            <li><a href="registration.html">Enrollment</a></li>
+            <li><a href="faq.html">FAQs</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Courses</h4>
+          <ul>
+            <li><a href="courses.html">Noorani Qaida</a></li>
+            <li><a href="courses.html">Quran Reading</a></li>
+            <li><a href="courses.html">Tajweed Rules</a></li>
+            <li><a href="courses.html">Hifz Program</a></li>
+            <li><a href="courses.html">Arabic Language</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Contact Us</h4>
+          <div class="footer-contact-item">
+            <div class="icon"><i class="fa-solid fa-phone"></i></div>
+            <div class="info">8074027524</div>
+          </div>
+          <div class="footer-contact-item">
+            <div class="icon"><i class="fa-solid fa-envelope"></i></div>
+            <div class="info"><a href="mailto:mohammadabdullahabdullah957@gmail.com">mohammadabdullah...</a></div>
+          </div>
+          <div class="footer-contact-item">
+            <div class="icon"><i class="fa-solid fa-location-dot"></i></div>
+            <div class="info">Online Classes (Worldwide)</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>© 2026 Abdullah Quran Academy. All Rights Reserved.</div>
+        <div>
+          <a href="privacy.html">Privacy Policy</a> | 
+          <a href="privacy.html">Terms & Conditions</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ── FLOATING BUTTONS ── -->
+  <a href="https://wa.me/8074027524" class="whatsapp-float" target="_blank" aria-label="WhatsApp Support">
+    <i class="fa-brands fa-whatsapp"></i>
+  </a>
+
+  <button id="scrollTop" aria-label="Scroll to top">
+    <i class="fa-solid fa-arrow-up"></i>
+  </button>
+
+  <!-- JS Scripts -->
+  <script src="assets/js/main.js"></script>
+  
+  <!-- Inline JS for Course Filtering -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const tabs = document.querySelectorAll('.tab-btn');
+      const cards = document.querySelectorAll('.course-grid .course-card');
+
+      tabs.forEach(tab => {
+        tab.addEventListener('click', () => {
+          const filter = tab.dataset.tab;
+          
+          // Set active tab
+          tabs.forEach(t => t.classList.remove('active'));
+          tab.classList.add('active');
+          
+          // Filter cards
+          cards.forEach(card => {
+            const ids = card.dataset.id.split(' ');
+            if (filter === 'all' || ids.includes(filter)) {
+              card.classList.add('active');
+            } else {
+              card.classList.remove('active');
+            }
+          });
+        });
+      });
+    });
+  </script>
+</body>
+</html>

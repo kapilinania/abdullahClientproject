@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Registration | Abdullah Quran Academy</title>
+  
+  <!-- Google Font: Lato & Amiri -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet">
+  
+  <!-- Font Awesome for Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/components.css">
+  <link rel="stylesheet" href="assets/css/animations.css">
+  
+  <style>
+    /* Multi-step form specific styles */
+    .form-steps-container { max-width: 700px; margin: 0 auto; background: var(--white); padding: 40px; border-radius: var(--radius-lg); border: 1px solid var(--border); box-shadow: var(--shadow-sm); }
+    .form-step { display: none; }
+    .form-step.active { display: block; animation: fadeInUp 0.5s ease; }
+    .step-indicators { display: flex; justify-content: space-between; margin-bottom: 40px; position: relative; }
+    .step-indicators::before { content: ''; position: absolute; top: 15px; left: 0; right: 0; height: 2px; background: var(--cream-dark); z-index: 1; }
+    .step-indicator { width: 32px; height: 32px; background: var(--cream-dark); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 0.9rem; color: var(--text-muted); z-index: 2; position: relative; transition: var(--transition); }
+    .step-indicator.active { background: var(--primary); color: white; }
+    .step-indicator.done { background: var(--gold); color: var(--navy); }
+    .step-label { position: absolute; top: 40px; font-size: 0.75rem; white-space: nowrap; left: 50%; transform: translateX(-50%); font-weight: 700; color: var(--text-muted); }
+    .step-indicator.active .step-label { color: var(--primary); }
+    .form-nav-btns { display: flex; justify-content: space-between; margin-top: 30px; }
+  </style>
+</head>
+<body>
+
+  <!-- ── Loading Screen ── -->
+  <div id="loader">
+    <div class="loader-logo">العربية</div>
+    <div class="loader-spinner"></div>
+  </div>
+
+  <!-- ── NAVBAR ── -->
+  <nav class="navbar" id="navbar">
+    <div class="container nav-inner">
+      <a href="index.html" class="nav-logo">
+        <div class="nav-logo-icon">Q</div>
+        <div class="nav-logo-text">
+          <div class="name">ABDULLAH</div>
+          <div class="tagline">Quran Academy</div>
+        </div>
+      </a>
+      
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="courses.html">Courses</a>
+        <a href="teachers.html">Teachers</a>
+        <a href="registration.html" class="active">Registration</a>
+        <a href="faq.html">FAQ</a>
+        <a href="contact.html">Contact</a>
+      </div>
+
+      <div class="nav-cta">
+        <a href="free-trial.html" class="btn btn-gold btn-sm">Free Trial</a>
+      </div>
+
+      <div class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ── MOBILE MENU ── -->
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="courses.html">Courses</a>
+    <a href="teachers.html">Teachers</a>
+    <a href="registration.html" class="active">Registration</a>
+    <a href="faq.html">FAQ</a>
+    <a href="contact.html">Contact</a>
+    <a href="free-trial.html" class="btn btn-gold">Book Free Trial</a>
+  </div>
+
+  <!-- ── PAGE HERO ── -->
+  <section class="page-hero">
+    <div class="pattern-overlay"></div>
+    <div class="container">
+      <h1 class="page-hero-title">Student <span>Registration</span></h1>
+      <p class="page-hero-sub">Fill out the form below to enroll in our premium online academy. It only takes a few minutes.</p>
+      <div class="breadcrumb">
+        <a href="index.html">Home</a>
+        <span class="sep">/</span>
+        <span>Registration</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── REGISTRATION FORM ── -->
+  <section class="section section-cream">
+    <div class="container">
+      
+      <div class="form-steps-container">
+        
+        <!-- Step Indicators -->
+        <div class="step-indicators">
+          <div class="step-indicator active">1<span class="step-label">Personal Info</span></div>
+          <div class="step-indicator">2<span class="step-label">Course & Time</span></div>
+          <div class="step-indicator">3<span class="step-label">Experience</span></div>
+        </div>
+
+        <form id="registrationForm" class="validated-form">
+          
+          <!-- STEP 1: Personal Info -->
+          <div class="form-step active">
+            <div class="form-group">
+              <label>Student Name <span class="req">*</span></label>
+              <input type="text" name="student_name" class="form-control" required placeholder="Enter student's full name">
+              <div class="form-error"></div>
+            </div>
+
+            <div class="form-group">
+              <label>Parent/Guardian Name (If student is minor)</label>
+              <input type="text" name="parent_name" class="form-control" placeholder="Enter parent's full name">
+            </div>
+
+            <div class="grid-2">
+              <div class="form-group">
+                <label>Email Address <span class="req">*</span></label>
+                <input type="email" name="email" class="form-control" required placeholder="example@email.com">
+                <div class="form-error"></div>
+              </div>
+              <div class="form-group">
+                <label>Mobile Number <span class="req">*</span></label>
+                <input type="tel" name="mobile" class="form-control" required placeholder="+1 234 567 890">
+                <div class="form-error"></div>
+              </div>
+            </div>
+
+            <div class="grid-2">
+              <div class="form-group">
+                <label>Country <span class="req">*</span></label>
+                <select name="country" class="form-control" required>
+                  <option value="">Select Country</option>
+                  <option value="USA">United States</option>
+                  <option value="UK">United Kingdom</option>
+                  <option value="Canada">Canada</option>
+                  <option value="Australia">Australia</option>
+                  <option value="Other">Other</option>
+                </select>
+                <div class="form-error"></div>
+              </div>
+              <div class="form-group">
+                <label>Age <span class="req">*</span></label>
+                <input type="number" name="age" class="form-control" required placeholder="Student's age">
+                <div class="form-error"></div>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label style="display: block; margin-bottom: 8px;">Gender <span class="req">*</span></label>
+              <div class="d-flex gap-24">
+                <label style="display: flex; align-items: center; gap: 8px; font-weight: normal;">
+                  <input type="radio" name="gender" value="Male" required> Male
+                </label>
+                <label style="display: flex; align-items: center; gap: 8px; font-weight: normal;">
+                  <input type="radio" name="gender" value="Female"> Female
+                </label>
+              </div>
+              <div class="form-error"></div>
+            </div>
+          </div>
+
+          <!-- STEP 2: Course & Time -->
+          <div class="form-step">
+            <div class="form-group">
+              <label>Select Course <span class="req">*</span></label>
+              <select name="course" class="form-control" required>
+                <option value="">Choose a course</option>
+                <option value="Noorani Qaida">Noorani Qaida Course</option>
+                <option value="Quran Reading">Quran Reading Course</option>
+                <option value="Tajweed">Tajweed Course</option>
+                <option value="Hifz">Hifz Program</option>
+                <option value="Arabic Language">Arabic Language Course</option>
+                <option value="Islamic Studies">Islamic Studies Course</option>
+              </select>
+              <div class="form-error"></div>
+            </div>
+
+            <div class="form-group">
+              <label>Preferred Class Timing <span class="req">*</span></label>
+              <select name="timing" class="form-control" required>
+                <option value="">Select preferred time</option>
+                <option value="Morning">Morning (8 AM - 12 PM)</option>
+                <option value="Afternoon">Afternoon (12 PM - 4 PM)</option>
+                <option value="Evening">Evening (4 PM - 8 PM)</option>
+                <option value="Late Night">Late Night (8 PM - 12 AM)</option>
+              </select>
+              <div class="form-error"></div>
+            </div>
+
+            <div class="form-group">
+              <label>Time Zone <span class="req">*</span></label>
+              <input type="text" name="timezone" class="form-control" required placeholder="e.g., EST, GMT, etc.">
+              <div class="form-error"></div>
+            </div>
+          </div>
+
+          <!-- STEP 3: Experience & Message -->
+          <div class="form-step">
+            <div class="form-group">
+              <label>Previous Quranic Education Experience</label>
+              <textarea name="experience" class="form-control" placeholder="Tell us if you or your child have studied before, and what level you reached..."></textarea>
+            </div>
+
+            <div class="form-group">
+              <label>Any Specific Requirements or Message</label>
+              <textarea name="message" class="form-control" placeholder="Any special needs, teacher preference, or questions?"></textarea>
+            </div>
+
+            <div class="form-group">
+              <label style="display: flex; align-items: center; gap: 8px; font-weight: normal;">
+                <input type="checkbox" name="whatsapp_optin" checked> Send confirmation via WhatsApp
+              </label>
+            </div>
+          </div>
+
+          <!-- Navigation Buttons -->
+          <div class="form-nav-btns">
+            <button type="button" class="btn btn-outline step-prev" style="display: none;">Back</button>
+            <button type="button" class="btn btn-primary step-next">Next</button>
+            <button type="submit" class="btn btn-gold" style="display: none;">Submit Registration</button>
+          </div>
+
+        </form>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ── SUCCESS MODAL ── -->
+  <div class="modal-overlay" id="successModal">
+    <div class="modal-box text-center">
+      <div class="modal-close">&times;</div>
+      <div class="success-icon" style="font-size: 4rem; color: var(--gold); margin-bottom: 20px;">
+        <i class="fa-solid fa-circle-check"></i>
+      </div>
+      <h2 class="text-dark fw-900 mb-16">Registration Successful!</h2>
+      <p class="text-muted mb-32">JazakAllah Khair for registering with Abdullah Quran Academy. We have received your application and will contact you within 24 hours via Email or WhatsApp to schedule your classes.</p>
+      <div class="d-flex gap-16 justify-center">
+        <a href="index.html" class="btn btn-primary">Go to Home</a>
+        <a href="https://wa.me/8074027524" class="btn btn-gold"><i class="fa-brands fa-whatsapp"></i> Chat with Us</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── FOOTER ── -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="nav-logo">
+            <div class="nav-logo-icon">Q</div>
+            <div class="nav-logo-text">
+              <div class="name" style="color: white;">ABDULLAH</div>
+              <div class="tagline">Quran Academy</div>
+            </div>
+          </a>
+          <p>A premium online academy offering high-quality Quran, Arabic, and Islamic studies education for students worldwide.</p>
+          <div class="footer-social">
+            <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="https://instagram.com/abdullah.752428"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#"><i class="fa-brands fa-youtube"></i></a>
+            <a href="https://wa.me/8074027524"><i class="fa-brands fa-whatsapp"></i></a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="teachers.html">Our Teachers</a></li>
+            <li><a href="registration.html">Enrollment</a></li>
+            <li><a href="faq.html">FAQs</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Courses</h4>
+          <ul>
+            <li><a href="courses.html">Noorani Qaida</a></li>
+            <li><a href="courses.html">Quran Reading</a></li>
+            <li><a href="courses.html">Tajweed Rules</a></li>
+            <li><a href="courses.html">Hifz Program</a></li>
+            <li><a href="courses.html">Arabic Language</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Contact Us</h4>
+          <div class="footer-contact-item">
+            <div class="icon"><i class="fa-solid fa-phone"></i></div>
+            <div class="info">8074027524</div>
+          </div>
+          <div class="footer-contact-item">
+            <div class="icon"><i class="fa-solid fa-envelope"></i></div>
+            <div class="info"><a href="mailto:mohammadabdullahabdullah957@gmail.com">mohammadabdullah...</a></div>
+          </div>
+          <div class="footer-contact-item">
+            <div class="icon"><i class="fa-solid fa-location-dot"></i></div>
+            <div class="info">Online Classes (Worldwide)</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>© 2026 Abdullah Quran Academy. All Rights Reserved.</div>
+        <div>
+          <a href="privacy.html">Privacy Policy</a> | 
+          <a href="privacy.html">Terms & Conditions</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ── FLOATING BUTTONS ── -->
+  <a href="https://wa.me/8074027524" class="whatsapp-float" target="_blank" aria-label="WhatsApp Support">
+    <i class="fa-brands fa-whatsapp"></i>
+  </a>
+
+  <button id="scrollTop" aria-label="Scroll to top">
+    <i class="fa-solid fa-arrow-up"></i>
+  </button>
+
+  <!-- JS Scripts -->
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/slider.js"></script>
+  
+  <!-- Inline script to handle multi-step visibility specific to this page -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const steps = document.querySelectorAll('.form-step');
+      const indicators = document.querySelectorAll('.step-indicator');
+      const nextBtn = document.querySelector('.step-next');
+      const prevBtn = document.querySelector('.step-prev');
+      const submitBtn = document.querySelector('[type="submit"]');
+      let current = 0;
+
+      function updateForm() {
+        steps.forEach((s, i) => s.classList.toggle('active', i === current));
+        indicators.forEach((ind, i) => {
+          ind.classList.toggle('active', i === current);
+          ind.classList.toggle('done', i < current);
+        });
+
+        prevBtn.style.display = current === 0 ? 'none' : 'inline-flex';
+        
+        if (current === steps.length - 1) {
+          nextBtn.style.display = 'none';
+          submitBtn.style.display = 'inline-flex';
+        } else {
+          nextBtn.style.display = 'inline-flex';
+          submitBtn.style.display = 'none';
+        }
+      }
+
+      nextBtn.addEventListener('click', () => {
+        // Basic validation for current step before proceeding
+        const currentInputs = steps[current].querySelectorAll('[required]');
+        let valid = true;
+        currentInputs.forEach(input => {
+          if (!input.value.trim() || (input.type === 'radio' && !steps[current].querySelector('input[name="gender"]:checked'))) {
+            valid = false;
+            input.classList.add('error');
+          } else {
+            input.classList.remove('error');
+          }
+        });
+
+        if (valid && current < steps.length - 1) {
+          current++;
+          updateForm();
+        }
+      });
+
+      prevBtn.addEventListener('click', () => {
+        if (current > 0) {
+          current--;
+          updateForm();
+        }
+      });
+      
+      // Close modal
+      document.querySelector('.modal-close').addEventListener('click', () => {
+        document.getElementById('successModal').classList.remove('open');
+      });
+    });
+  </script>
+</body>
+</html>

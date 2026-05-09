@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Teachers | Abdullah Quran Academy</title>
+  
+  <!-- Google Font: Lato & Amiri -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet">
+  
+  <!-- Font Awesome for Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/components.css">
+  <link rel="stylesheet" href="assets/css/animations.css">
+  
+  <style>
+    .teacher-card {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+    }
+    .teacher-card-body {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ── Loading Screen ── -->
+  <div id="loader">
+    <div class="loader-logo">العربية</div>
+    <div class="loader-spinner"></div>
+  </div>
+
+  <!-- ── NAVBAR ── -->
+  <nav class="navbar" id="navbar">
+    <div class="container nav-inner">
+      <a href="index.html" class="nav-logo">
+        <div class="nav-logo-icon">Q</div>
+        <div class="nav-logo-text">
+          <div class="name">ABDULLAH</div>
+          <div class="tagline">Quran Academy</div>
+        </div>
+      </a>
+      
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="journey.html">Journey</a>
+        <a href="courses.html">Courses</a>
+        <a href="teachers.html" class="active">Teachers</a>
+        <a href="registration.html">Registration</a>
+        <a href="faq.html">FAQ</a>
+        <a href="contact.html">Contact</a>
+      </div>
+
+      <div class="nav-cta">
+        <a href="free-trial.html" class="btn btn-gold btn-sm">Free Trial</a>
+      </div>
+
+      <div class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ── MOBILE MENU ── -->
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="journey.html">Journey</a>
+    <a href="courses.html">Courses</a>
+    <a href="teachers.html" class="active">Teachers</a>
+    <a href="registration.html">Registration</a>
+    <a href="faq.html">FAQ</a>
+    <a href="contact.html">Contact</a>
+    <a href="free-trial.html" class="btn btn-gold">Book Free Trial</a>
+  </div>
+
+  <!-- ── PAGE HERO ── -->
+  <section class="page-hero">
+    <div class="pattern-overlay"></div>
+    <div class="container">
+      <h1 class="page-hero-title">Our Certified <span>Tutors</span></h1>
+      <p class="page-hero-sub">Learn from highly qualified, experienced, and dedicated male and female native Arabic speakers.</p>
+      <div class="breadcrumb">
+        <a href="index.html">Home</a>
+        <span class="sep">/</span>
+        <span>Teachers</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── TEACHERS OVERVIEW ── -->
+  <section class="section section-white">
+    <div class="container grid-2 align-center">
+      <div class="reveal-left">
+        <span class="section-label">Elite Faculty</span>
+        <h2 class="section-title">Why Our Teachers <span>Stand Out</span></h2>
+        <div class="divider divider-left"></div>
+        <p class="text-muted mt-24">We take immense pride in our faculty. All our tutors are carefully selected through a rigorous testing process. They are not just experts in their fields but are also trained in online teaching psychology, ensuring they can connect with and motivate students of all ages.</p>
+        
+        <div class="grid-2 mt-32">
+          <div class="d-flex align-center gap-8">
+            <i class="fa-solid fa-certificate text-green"></i>
+            <span class="fw-700">Ijazah Holders</span>
+          </div>
+          <div class="d-flex align-center gap-8">
+            <i class="fa-solid fa-globe text-green"></i>
+            <span class="fw-700">Multi-lingual</span>
+          </div>
+          <div class="d-flex align-center gap-8">
+            <i class="fa-solid fa-person-dress text-green"></i>
+            <span class="fw-700">Female Tutors Available</span>
+          </div>
+          <div class="d-flex align-center gap-8">
+            <i class="fa-solid fa-star text-green"></i>
+            <span class="fw-700">Top Rated by Parents</span>
+          </div>
+        </div>
+      </div>
+      
+      <div class="reveal-right">
+        <div style="background: var(--cream); height: 300px; border-radius: var(--radius-md); display: flex; align-items: center; justify-content: center;">
+           <i class="fa-solid fa-graduation-cap" style="font-size: 5rem; color: var(--gold);"></i>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── FEATURED INSTRUCTORS (SLIDER) ── -->
+  <section class="section section-cream">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-label">Meet the Tutors</span>
+        <h2 class="section-title">Our Featured <span>Instructors</span></h2>
+        <p class="section-subtitle">Dedicated professionals committed to your success. Slide to see more.</p>
+      </div>
+
+      <!-- Slider Wrapper with 6 Teachers -->
+      <div class="slider-wrapper reveal" data-slider="true" data-per-view="3" data-auto="4000">
+        <div class="slider-track">
+          
+          <!-- Teacher 1 (Male) -->
+          <div class="teacher-card">
+            <div class="teacher-card-head">
+              <div class="teacher-avatar">
+                <i class="fa-solid fa-user-tie" style="color: var(--primary);"></i>
+              </div>
+              <h3 class="teacher-name">Sheikh Ahmed Al-Misri</h3>
+              <div class="teacher-role">Quran & Tajweed Expert</div>
+            </div>
+            <div class="teacher-card-body">
+              <div>
+                <div class="stars">⭐⭐⭐⭐⭐ (4.9)</div>
+                <div class="teacher-tags">
+                  <span class="teacher-tag">Native Arab</span>
+                  <span class="teacher-tag">Al-Azhar Grad</span>
+                </div>
+                <p class="text-muted" style="font-size: 0.85rem; margin-bottom: 16px;">Expert in Hafs 'an 'Asim recitation with over 8 years of experience teaching non-Arabic speakers.</p>
+              </div>
+              <div>
+                <div class="teacher-stats">
+                  <div class="teacher-stat">
+                    <span class="num">8+</span>
+                    <span class="lbl">Yrs Exp</span>
+                  </div>
+                  <div class="teacher-stat">
+                    <span class="num">500+</span>
+                    <span class="lbl">Students</span>
+                  </div>
+                </div>
+                <div class="d-flex align-center justify-center gap-8" style="font-size: 0.8rem; color: var(--text-muted);">
+                  <i class="fa-solid fa-language"></i> Speaks: Arabic, English
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Teacher 2 (Female) -->
+          <div class="teacher-card">
+            <div class="teacher-card-head" style="background: linear-gradient(135deg, var(--navy), var(--navy-light));">
+              <div class="teacher-avatar" style="border-color: var(--white);">
+                <i class="fa-solid fa-user-nurse" style="color: var(--navy);"></i>
+              </div>
+              <h3 class="teacher-name">Ustazah Fatima Zahra</h3>
+              <div class="teacher-role">Kids & Female Specialist</div>
+            </div>
+            <div class="teacher-card-body">
+              <div>
+                <div class="stars">⭐⭐⭐⭐⭐ (5.0)</div>
+                <div class="teacher-tags">
+                  <span class="teacher-tag">Female</span>
+                  <span class="teacher-tag">Noorani Qaida</span>
+                </div>
+                <p class="text-muted" style="font-size: 0.85rem; margin-bottom: 16px;">Specializes in teaching children and sisters. Uses interactive games and stories to keep kids engaged.</p>
+              </div>
+              <div>
+                <div class="teacher-stats">
+                  <div class="teacher-stat">
+                    <span class="num">5+</span>
+                    <span class="lbl">Yrs Exp</span>
+                  </div>
+                  <div class="teacher-stat">
+                    <span class="num">300+</span>
+                    <span class="lbl">Students</span>
+                  </div>
+                </div>
+                <div class="d-flex align-center justify-center gap-8" style="font-size: 0.8rem; color: var(--text-muted);">
+                  <i class="fa-solid fa-language"></i> Speaks: Arabic, English
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Teacher 3 (Male) -->
+          <div class="teacher-card">
+            <div class="teacher-card-head">
+              <div class="teacher-avatar">
+                <i class="fa-solid fa-user-tie" style="color: var(--primary);"></i>
+              </div>
+              <h3 class="teacher-name">Ustadh Mahmoud Ali</h3>
+              <div class="teacher-role">Arabic Language & Hifz</div>
+            </div>
+            <div class="teacher-card-body">
+              <div>
+                <div class="stars">⭐⭐⭐⭐⭐ (4.8)</div>
+                <div class="teacher-tags">
+                  <span class="teacher-tag">Arabic Grad</span>
+                  <span class="teacher-tag">Hafiz</span>
+                </div>
+                <p class="text-muted" style="font-size: 0.85rem; margin-bottom: 16px;">Passionate about teaching Arabic as a second language and guiding students through Hifz.</p>
+              </div>
+              <div>
+                <div class="teacher-stats">
+                  <div class="teacher-stat">
+                    <span class="num">6+</span>
+                    <span class="lbl">Yrs Exp</span>
+                  </div>
+                  <div class="teacher-stat">
+                    <span class="num">400+</span>
+                    <span class="lbl">Students</span>
+                  </div>
+                </div>
+                <div class="d-flex align-center justify-center gap-8" style="font-size: 0.8rem; color: var(--text-muted);">
+                  <i class="fa-solid fa-language"></i> Speaks: Arabic, English, Urdu
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Teacher 4 (Female) -->
+          <div class="teacher-card">
+            <div class="teacher-card-head" style="background: linear-gradient(135deg, var(--navy), var(--navy-light));">
+              <div class="teacher-avatar" style="border-color: var(--white);">
+                <i class="fa-solid fa-user-nurse" style="color: var(--navy);"></i>
+              </div>
+              <h3 class="teacher-name">Ustazah Aisha Noor</h3>
+              <div class="teacher-role">Advanced Tajweed Expert</div>
+            </div>
+            <div class="teacher-card-body">
+              <div>
+                <div class="stars">⭐⭐⭐⭐⭐ (4.9)</div>
+                <div class="teacher-tags">
+                  <span class="teacher-tag">Female</span>
+                  <span class="teacher-tag">Ijazah Holder</span>
+                </div>
+                <p class="text-muted" style="font-size: 0.85rem; margin-bottom: 16px;">Holds multiple Ijazahs in Quran recitation. Specializes in correcting pronunciation for advanced students.</p>
+              </div>
+              <div>
+                <div class="teacher-stats">
+                  <div class="teacher-stat">
+                    <span class="num">7+</span>
+                    <span class="lbl">Yrs Exp</span>
+                  </div>
+                  <div class="teacher-stat">
+                    <span class="num">250+</span>
+                    <span class="lbl">Students</span>
+                  </div>
+                </div>
+                <div class="d-flex align-center justify-center gap-8" style="font-size: 0.8rem; color: var(--text-muted);">
+                  <i class="fa-solid fa-language"></i> Speaks: Arabic, English
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Teacher 5 (Male) - NEW -->
+          <div class="teacher-card">
+            <div class="teacher-card-head">
+              <div class="teacher-avatar">
+                <i class="fa-solid fa-user-tie" style="color: var(--primary);"></i>
+              </div>
+              <h3 class="teacher-name">Dr. Kareem Hassan</h3>
+              <div class="teacher-role">Islamic Studies Professor</div>
+            </div>
+            <div class="teacher-card-body">
+              <div>
+                <div class="stars">⭐⭐⭐⭐⭐ (5.0)</div>
+                <div class="teacher-tags">
+                  <span class="teacher-tag">PhD holder</span>
+                  <span class="teacher-tag">Historian</span>
+                </div>
+                <p class="text-muted" style="font-size: 0.85rem; margin-bottom: 16px;">Teaches Fiqh, Seerah, and Aqeedah. Excellent at making complex topics simple for beginners.</p>
+              </div>
+              <div>
+                <div class="teacher-stats">
+                  <div class="teacher-stat">
+                    <span class="num">10+</span>
+                    <span class="lbl">Yrs Exp</span>
+                  </div>
+                  <div class="teacher-stat">
+                    <span class="num">600+</span>
+                    <span class="lbl">Students</span>
+                  </div>
+                </div>
+                <div class="d-flex align-center justify-center gap-8" style="font-size: 0.8rem; color: var(--text-muted);">
+                  <i class="fa-solid fa-language"></i> Speaks: Arabic, English
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Teacher 6 (Female) - NEW -->
+          <div class="teacher-card">
+            <div class="teacher-card-head" style="background: linear-gradient(135deg, var(--navy), var(--navy-light));">
+              <div class="teacher-avatar" style="border-color: var(--white);">
+                <i class="fa-solid fa-user-nurse" style="color: var(--navy);"></i>
+              </div>
+              <h3 class="teacher-name">Ustazah Maryam Omar</h3>
+              <div class="teacher-role">Hifz & Kids Specialist</div>
+            </div>
+            <div class="teacher-card-body">
+              <div>
+                <div class="stars">⭐⭐⭐⭐⭐ (4.9)</div>
+                <div class="teacher-tags">
+                  <span class="teacher-tag">Female</span>
+                  <span class="teacher-tag">Hafiza</span>
+                </div>
+                <p class="text-muted" style="font-size: 0.85rem; margin-bottom: 16px;">Helps young children memorize short Surahs with fun activities. Very gentle and encouraging.</p>
+              </div>
+              <div>
+                <div class="teacher-stats">
+                  <div class="teacher-stat">
+                    <span class="num">4+</span>
+                    <span class="lbl">Yrs Exp</span>
+                  </div>
+                  <div class="teacher-stat">
+                    <span class="num">200+</span>
+                    <span class="lbl">Students</span>
+                  </div>
+                </div>
+                <div class="d-flex align-center justify-center gap-8" style="font-size: 0.8rem; color: var(--text-muted);">
+                  <i class="fa-solid fa-language"></i> Speaks: Arabic, English
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Slider Controls -->
+        <div class="slider-controls">
+          <button class="slider-btn slider-btn-prev"><i class="fa-solid fa-arrow-left"></i></button>
+          <div class="slider-dots"></div>
+          <button class="slider-btn slider-btn-next"><i class="fa-solid fa-arrow-right"></i></button>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ── SELECTION PROCESS ── -->
+  <section class="section section-white">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-label">Quality Assurance</span>
+        <h2 class="section-title">Our Rigorous <span>Selection Process</span></h2>
+        <p class="section-subtitle">We only hire the top 5% of applicants to ensure your family receives the best education.</p>
+      </div>
+
+      <div class="process-grid stagger-children">
+        <div class="process-step">
+          <div class="process-num">1</div>
+          <h3 class="process-title">Degree Verification</h3>
+          <p class="process-desc">We verify certifications from authentic Islamic universities like Al-Azhar.</p>
+        </div>
+
+        <div class="process-step">
+          <div class="process-num">2</div>
+          <h3 class="process-title">Recitation Test</h3>
+          <p class="process-desc">Candidates must pass a live Tajweed and Hifz evaluation by our senior board.</p>
+        </div>
+
+        <div class="process-step">
+          <div class="process-num">3</div>
+          <h3 class="process-title">Mock Classes</h3>
+          <p class="process-desc">Tutors must demonstrate their ability to teach and engage with children and adults.</p>
+        </div>
+
+        <div class="process-step">
+          <div class="process-num">4</div>
+          <h3 class="process-title">Continuous Training</h3>
+          <p class="process-desc">Hired tutors undergo regular workshops on modern online teaching methods.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── FOOTER ── -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="nav-logo">
+            <div class="nav-logo-icon">Q</div>
+            <div class="nav-logo-text">
+              <div class="name" style="color: white;">ABDULLAH</div>
+              <div class="tagline">Quran Academy</div>
+            </div>
+          </a>
+          <p>A premium online academy offering high-quality Quran, Arabic, and Islamic studies education for students worldwide.</p>
+          <div class="footer-social">
+            <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="https://instagram.com/abdullah.752428"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#"><i class="fa-brands fa-youtube"></i></a>
+            <a href="https://wa.me/8074027524"><i class="fa-brands fa-whatsapp"></i></a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="teachers.html">Our Teachers</a></li>
+            <li><a href="registration.html">Enrollment</a></li>
+            <li><a href="faq.html">FAQs</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Courses</h4>
+          <ul>
+            <li><a href="courses.html">Noorani Qaida</a></li>
+            <li><a href="courses.html">Quran Reading</a></li>
+            <li><a href="courses.html">Tajweed Rules</a></li>
+            <li><a href="courses.html">Hifz Program</a></li>
+            <li><a href="courses.html">Arabic Language</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Contact Us</h4>
+          <div class="footer-contact-item">
+            <div class="icon"><i class="fa-solid fa-phone"></i></div>
+            <div class="info">8074027524</div>
+          </div>
+          <div class="footer-contact-item">
+            <div class="icon"><i class="fa-solid fa-envelope"></i></div>
+            <div class="info"><a href="mailto:mohammadabdullahabdullah957@gmail.com">mohammadabdullah...</a></div>
+          </div>
+          <div class="footer-contact-item">
+            <div class="icon"><i class="fa-solid fa-location-dot"></i></div>
+            <div class="info">Online Classes (Worldwide)</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>© 2026 Abdullah Quran Academy. All Rights Reserved.</div>
+        <div>
+          <a href="privacy.html">Privacy Policy</a> | 
+          <a href="privacy.html">Terms & Conditions</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ── FLOATING BUTTONS ── -->
+  <a href="https://wa.me/8074027524" class="whatsapp-float" target="_blank" aria-label="WhatsApp Support">
+    <i class="fa-brands fa-whatsapp"></i>
+  </a>
+
+  <button id="scrollTop" aria-label="Scroll to top">
+    <i class="fa-solid fa-arrow-up"></i>
+  </button>
+
+  <!-- JS Scripts -->
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/slider.js"></script>
+</body>
+</html>

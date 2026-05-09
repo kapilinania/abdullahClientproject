@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Learning Journey | Abdullah Quran Academy</title>
+  
+  <!-- Google Font: Lato & Amiri -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet">
+  
+  <!-- Font Awesome for Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/components.css">
+  <link rel="stylesheet" href="assets/css/animations.css">
+  
+  <style>
+    /* Specific styles for the Journey page */
+    .journey-box {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 40px;
+      transition: var(--transition);
+      height: 100%;
+    }
+    .journey-box:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow-md);
+      border-color: var(--gold);
+    }
+    .phase-num {
+      font-size: 3rem;
+      font-weight: 900;
+      color: var(--gold);
+      opacity: 0.3;
+      line-height: 1;
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ── Loading Screen ── -->
+  <div id="loader">
+    <div class="loader-logo">العربية</div>
+    <div class="loader-spinner"></div>
+  </div>
+
+  <!-- ── NAVBAR ── -->
+  <nav class="navbar" id="navbar">
+    <div class="container nav-inner">
+      <a href="index.html" class="nav-logo">
+        <div class="nav-logo-icon">Q</div>
+        <div class="nav-logo-text">
+          <div class="name">ABDULLAH</div>
+          <div class="tagline">Quran Academy</div>
+        </div>
+      </a>
+      
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="journey.html" class="active">Journey</a>
+        <a href="courses.html">Courses</a>
+        <a href="teachers.html">Teachers</a>
+        <a href="registration.html">Registration</a>
+        <a href="faq.html">FAQ</a>
+        <a href="contact.html">Contact</a>
+      </div>
+
+      <div class="nav-cta">
+        <a href="free-trial.html" class="btn btn-gold btn-sm">Free Trial</a>
+      </div>
+
+      <div class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ── MOBILE MENU ── -->
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="journey.html" class="active">Journey</a>
+    <a href="courses.html">Courses</a>
+    <a href="teachers.html">Teachers</a>
+    <a href="registration.html">Registration</a>
+    <a href="faq.html">FAQ</a>
+    <a href="contact.html">Contact</a>
+    <a href="free-trial.html" class="btn btn-gold">Book Free Trial</a>
+  </div>
+
+  <!-- ── 1. HERO SECTION ── -->
+  <section class="page-hero">
+    <div class="pattern-overlay"></div>
+    <div class="container">
+      <span class="section-label" style="color: var(--gold-light);">Your Path to Mastery</span>
+      <h1 class="page-hero-title">The Prophetic <span>Journey</span></h1>
+      <p class="page-hero-sub">Explore the structured, step-by-step path we take to transform beginners into beautiful reciters of the Holy Quran.</p>
+      <div class="breadcrumb">
+        <a href="index.html">Home</a>
+        <span class="sep">/</span>
+        <span>Journey</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── 2. PHASE 1: THE FOUNDATION ── -->
+  <section class="section section-white">
+    <div class="container grid-2 align-center">
+      <div class="reveal-left">
+        <div class="phase-num">01</div>
+        <span class="section-label">The Beginning</span>
+        <h2 class="section-title">The <span>Foundation</span></h2>
+        <div class="divider divider-left"></div>
+        <p class="text-muted mt-24">Every great building needs a strong foundation. For a student of the Quran, that foundation is the **Noorani Qaida**. We start here with absolute beginners.</p>
+        <p class="text-muted mt-16">In this phase, students learn to recognize Arabic letters in their various forms, master the correct points of articulation (Makhraj), and understand how to connect letters to form words. We don't rush; we ensure perfection before moving forward.</p>
+        
+        <div class="mt-24">
+          <span class="fw-700 text-dark">Focus Areas:</span>
+          <ul class="course-card-features mt-8">
+            <li>Letter Recognition & Correct Pronunciation</li>
+            <li>Vowel Sounds (Harakat) & Connection Rules</li>
+            <li>Building confidence in reading simple words</li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="reveal-right">
+        <div style="background: var(--cream); height: 350px; border-radius: var(--radius-lg); display: flex; align-items: center; justify-content: center;">
+          <i class="fa-solid fa-shapes" style="font-size: 5rem; color: var(--gold);"></i>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── 3. PHASE 2: THE FLUENCY ── -->
+  <section class="section section-cream">
+    <div class="container grid-2 align-center">
+      <div class="reveal-left order-2">
+        <div style="background: var(--white); height: 350px; border-radius: var(--radius-lg); display: flex; align-items: center; justify-content: center; border: 1px solid var(--border);">
+          <i class="fa-solid fa-book-open" style="font-size: 5rem; color: var(--primary);"></i>
+        </div>
+      </div>
+      
+      <div class="reveal-right order-1">
+        <div class="phase-num">02</div>
+        <span class="section-label">Moving Forward</span>
+        <h2 class="section-title">The <span>Fluency</span></h2>
+        <div class="divider divider-left"></div>
+        <p class="text-muted mt-24">Once the foundation is solid, the student steps into the vast garden of the Quran. This is the **Quran Reading** phase.</p>
+        <p class="text-muted mt-16">Students begin reading directly from the Mushaf. The focus shifts from decoding individual letters to smooth, continuous reading. We help students overcome the hesitation of reading long verses and build a natural rhythm.</p>
+        
+        <div class="mt-24">
+          <span class="fw-700 text-dark">Focus Areas:</span>
+          <ul class="course-card-features mt-8">
+            <li>Reading directly from the Mushaf</li>
+            <li>Overcoming stuttering and building speed</li>
+            <li>Connecting verses smoothly</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── 4. PHASE 3: THE PERFECTION ── -->
+  <section class="section section-white">
+    <div class="container grid-2 align-center">
+      <div class="reveal-left">
+        <div class="phase-num">03</div>
+        <span class="section-label">Beautification</span>
+        <h2 class="section-title">The <span>Perfection</span></h2>
+        <div class="divider divider-left"></div>
+        <p class="text-muted mt-24">To read the Quran as it was revealed to the Prophet (PBUH), one must master **Tajweed**. This is the phase of perfection.</p>
+        <p class="text-muted mt-16">We introduce the rules of Tajweed in a practical, easy-to-understand manner. Students learn about Noon Sakinah, Meem Sakinah, rules of Madd (prolongation), and stopping signs. Recitation becomes not just accurate, but beautiful.</p>
+        
+        <div class="mt-24">
+          <span class="fw-700 text-dark">Focus Areas:</span>
+          <ul class="course-card-features mt-8">
+            <li>Application of advanced Tajweed rules</li>
+            <li>Voice control and beautification of recitation</li>
+            <li>Understanding the rhythm of the Quran</li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="reveal-right">
+        <div style="background: var(--cream); height: 350px; border-radius: var(--radius-lg); display: flex; align-items: center; justify-content: center;">
+          <i class="fa-solid fa-gem" style="font-size: 5rem; color: var(--gold);"></i>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── 5. PHASE 4: THE PRESERVATION ── -->
+  <section class="section section-cream">
+    <div class="container grid-2 align-center">
+      <div class="reveal-left order-2">
+        <div style="background: var(--white); height: 350px; border-radius: var(--radius-lg); display: flex; align-items: center; justify-content: center; border: 1px solid var(--border);">
+          <i class="fa-solid fa-heart" style="font-size: 5rem; color: var(--primary);"></i>
+        </div>
+      </div>
+      
+      <div class="reveal-right order-1">
+        <div class="phase-num">04</div>
+        <span class="section-label">The Ultimate Goal</span>
+        <h2 class="section-title">The <span>Preservation</span></h2>
+        <div class="divider divider-left"></div>
+        <p class="text-muted mt-24">For those who wish to carry the Quran in their hearts, we offer the **Hifz (Memorization)** program.</p>
+        <p class="text-muted mt-16">This is a journey of dedication. We provide a structured memorization plan tailored to the student's capacity, combined with a rigorous daily revision (Dohr) system to ensure that what is memorized is never forgotten.</p>
+        
+        <div class="mt-24">
+          <span class="fw-700 text-dark">Focus Areas:</span>
+          <ul class="course-card-features mt-8">
+            <li>Custom memorization schedules</li>
+            <li>Strong emphasis on daily revision</li>
+            <li>Mental and spiritual preparation for Hifz</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── 6. THE SUPPORT ECOSYSTEM ── -->
+  <section class="section section-white">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-label">Why It Works</span>
+        <h2 class="section-title">The Support <span>Ecosystem</span></h2>
+        <p class="section-subtitle">We don't just teach; we support you and your child through every step of this blessed journey.</p>
+      </div>
+
+      <div class="grid-3 stagger-children mt-40">
+        <div class="journey-box">
+          <div class="text-green mb-16" style="font-size: 2rem;"><i class="fa-solid fa-user-clock"></i></div>
+          <h3 class="text-dark fw-700 mb-12">1-on-1 Mentorship</h3>
+          <p class="text-muted" style="font-size: 0.85rem;">Your teacher is your mentor. The full session is dedicated to you alone, allowing for immediate correction and personalized pacing.</p>
+        </div>
+
+        <div class="journey-box">
+          <div class="text-green mb-16" style="font-size: 2rem;"><i class="fa-solid fa-chart-line"></i></div>
+          <h3 class="text-dark fw-700 mb-12">Transparent Progress</h3>
+          <p class="text-muted" style="font-size: 0.85rem;">Parents receive regular updates and monthly reports. You will always know exactly what your child is learning and how they are progressing.</p>
+        </div>
+
+        <div class="journey-box">
+          <div class="text-green mb-16" style="font-size: 2rem;"><i class="fa-solid fa-shield-heart"></i></div>
+          <h3 class="text-dark fw-700 mb-12">Safe & Nurturing</h3>
+          <p class="text-muted" style="font-size: 0.85rem;">We provide a positive, encouraging environment. We believe in teaching with love and patience, making the Quran a source of joy for students.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── FOOTER ── -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="nav-logo">
+            <div class="nav-logo-icon">Q</div>
+            <div class="nav-logo-text">
+              <div class="name" style="color: white;">ABDULLAH</div>
+              <div class="tagline">Quran Academy</div>
+            </div>
+          </a>
+          <p>A premium online academy offering high-quality Quran, Arabic, and Islamic studies education for students worldwide.</p>
+          <div class="footer-social">
+            <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="https://instagram.com/abdullah.752428"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#"><i class="fa-brands fa-youtube"></i></a>
+            <a href="https://wa.me/8074027524"><i class="fa-brands fa-whatsapp"></i></a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="teachers.html">Our Teachers</a></li>
+            <li><a href="registration.html">Enrollment</a></li>
+            <li><a href="faq.html">FAQs</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Courses</h4>
+          <ul>
+            <li><a href="courses.html">Noorani Qaida</a></li>
+            <li><a href="courses.html">Quran Reading</a></li>
+            <li><a href="courses.html">Tajweed Rules</a></li>
+            <li><a href="courses.html">Hifz Program</a></li>
+            <li><a href="courses.html">Arabic Language</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Contact Us</h4>
+          <div class="footer-contact-item">
+            <div class="icon"><i class="fa-solid fa-phone"></i></div>
+            <div class="info">8074027524</div>
+          </div>
+          <div class="footer-contact-item">
+            <div class="icon"><i class="fa-solid fa-envelope"></i></div>
+            <div class="info"><a href="mailto:mohammadabdullahabdullah957@gmail.com">mohammadabdullah...</a></div>
+          </div>
+          <div class="footer-contact-item">
+            <div class="icon"><i class="fa-solid fa-location-dot"></i></div>
+            <div class="info">Online Classes (Worldwide)</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>© 2026 Abdullah Quran Academy. All Rights Reserved.</div>
+        <div>
+          <a href="privacy.html">Privacy Policy</a> | 
+          <a href="privacy.html">Terms & Conditions</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ── FLOATING BUTTONS ── -->
+  <a href="https://wa.me/8074027524" class="whatsapp-float" target="_blank" aria-label="WhatsApp Support">
+    <i class="fa-brands fa-whatsapp"></i>
+  </a>
+
+  <button id="scrollTop" aria-label="Scroll to top">
+    <i class="fa-solid fa-arrow-up"></i>
+  </button>
+
+  <!-- JS Scripts -->
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
